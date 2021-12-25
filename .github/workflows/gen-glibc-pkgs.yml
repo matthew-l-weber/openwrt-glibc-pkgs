@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: gen-glibc-pkgs
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  openwrt-docker:
+    runs-on: ['self-hosted','slow']
+    container:
+      image: ghcr.io/matthew-l-weber/openwrt-buildenv:sha256-fae20db7b46fc86938232f36746c326cea8b385c29299fd8c0b77c11bd34cebb.sig
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Log some stuff
+        run: |
+             ls -la
+             cd openwrt
+             ./scripts/diffconfig.sh
+             cat /etc/os-release 
