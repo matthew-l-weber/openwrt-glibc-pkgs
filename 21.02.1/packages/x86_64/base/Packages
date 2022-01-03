@@ -201,6 +201,51 @@ Size: 3021
 SHA256sum: 694efae629209c02005ccfe5f443abd676c8be38b403e5182d9cccaed3b827f6
 Description:  OpenWrt getrandom system helper
 
+Package: hostapd-basic-openssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libopenssl1.1
+Conflicts: hostapd, hostapd-basic
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 263240
+Filename: hostapd-basic-openssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 264274
+SHA256sum: 462ccc4a0b05a381d2328cf6731a8c762241b331da22d7b8c481f26641d13db6
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator with WPA-PSK, 802.11r and 802.11w support.
+
+Package: hostapd-basic-wolfssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libwolfssl4.8.1.66253b90
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 261550
+Filename: hostapd-basic-wolfssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 262572
+SHA256sum: bd38bee500d3ed08693bcfeb8f3ca826e7a58947c46197c36a2f5231ffdfb62a
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator with WPA-PSK, 802.11r and 802.11w support.
+
+Package: hostapd-basic
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: hostapd
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 246064
+Filename: hostapd-basic_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 247068
+SHA256sum: b673c32dcea967a1963fa9f4e6bbf85962c891bcb6e8986a6b4643b8917af096
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator with WPA-PSK, 802.11r and 802.11w support.
+
 Package: hostapd-common
 Version: 2020-06-08-5a8b3662-35
 Depends: libc, librt, libpthread
@@ -213,6 +258,81 @@ Filename: hostapd-common_2020-06-08-5a8b3662-35_x86_64.ipk
 Size: 11683
 SHA256sum: e3f25cf7433aa98f0c52df8a1e5568633a4a33225ee479ead7aedcf7b0776f58
 Description:  hostapd/wpa_supplicant common support files
+
+Package: hostapd-mini
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 219774
+Filename: hostapd-mini_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 220742
+SHA256sum: 4f1ea079ebcaa88ed3f85ad5360dc5020b8b5bd576fe5324d2af7ac9d74b5e9d
+Description:  This package contains a minimal IEEE 802.1x/WPA Authenticator (WPA-PSK only).
+
+Package: hostapd-openssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libopenssl1.1
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 373817
+Filename: hostapd-openssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 374776
+SHA256sum: e6e6fa737b56b75a5160dc4a072426670e16751d979ab602c58e9326130af936
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator.
+
+Package: hostapd-utils
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 19661
+Filename: hostapd-utils_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 20517
+SHA256sum: 7c392393cd8cc27b442cb11d27e675245ab6fec15cb5e15307516ea96c16efea
+Description:  This package contains a command line utility to control the
+ IEEE 802.1x/WPA/EAP/RADIUS Authenticator.
+
+Package: hostapd-wolfssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libwolfssl4.8.1.66253b90
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl
+Provides: hostapd
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 371824
+Filename: hostapd-wolfssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 372855
+SHA256sum: cc4ac3948a3be5906717a792a35894ccf6e877bc089a0b5fa3a5bb4bb28342d9
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator.
+
+Package: hostapd
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 383611
+Filename: hostapd_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 384591
+SHA256sum: dbe92f9e8a1685bebffd20968852d6789ecbbcf99f955177c75111e09f87409d
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator.
 
 Package: iw
 Version: 5.9-8fab0c9e-1
@@ -1279,6 +1399,171 @@ Filename: wl18xx-firmware_20201118-3_x86_64.ipk
 Size: 343957
 SHA256sum: 36581f99d9344311b43263c2c9f400e70efeef3d47bef436a013d0f984ef293c
 Description:  TI WL18xx firmware
+
+Package: wpa-cli
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 32424
+Filename: wpa-cli_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 33276
+SHA256sum: a677fbc6bc131a5629218fd301deda8851730833350405d1f1b93542f16e352b
+Description:  WPA Supplicant command line control utility
+
+Package: wpa-supplicant-basic
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad-openssl, wpad-wolfssl, wpa-supplicant, wpa-supplicant-mesh-openssl, wpa-supplicant-mesh-wolfssl
+Provides: wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 223446
+Filename: wpa-supplicant-basic_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 224350
+SHA256sum: b6c13650df5d6b733830ade9e5acd9869c38a2eb2dc0d92b0b73eba5f344c4b4
+Description:  WPA Supplicant (11r, 11w)
+
+Package: wpa-supplicant-mini
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad-openssl, wpad-wolfssl, wpa-supplicant, wpa-supplicant-mesh-openssl, wpa-supplicant-mesh-wolfssl, wpa-supplicant-basic
+Provides: wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 214049
+Filename: wpa-supplicant-mini_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 214915
+SHA256sum: f13b978744f98f00a144c8bb2818126a90899bb5da9fb9cb5e37c68a0184abb6
+Description:  WPA Supplicant (minimal)
+
+Package: wpa-supplicant
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad-openssl, wpad-wolfssl
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 401028
+Filename: wpa-supplicant_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 401791
+SHA256sum: d68f0e25f6fce57acbed90fa1126176963e9b8f81e10e987521ad7ed2bcd0fff
+Description:  WPA Supplicant (built-in full)
+
+Package: wpad-basic-openssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libopenssl1.1
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 396720
+Filename: wpad-basic-openssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 397703
+SHA256sum: 32fc3203d5eabc3004a498eb9a7b53ee7924a5301bd907e475ded515b0363bdd
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator and Supplicant with WPA-PSK, SAE (WPA3-Personal), 802.11r and 802.11w support.
+
+Package: wpad-basic-wolfssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libwolfssl4.8.1.66253b90
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 395504
+Filename: wpad-basic-wolfssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 396508
+SHA256sum: a1e6693c2b6b78d57e3fa48a8ae2ac51fbd536adabda4608edfb69f02cb8db2e
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator and Supplicant with WPA-PSK, SAE (WPA3-Personal), 802.11r and 802.11w support.
+
+Package: wpad-basic
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 375830
+Filename: wpad-basic_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 376862
+SHA256sum: b5dc2a375ec55569a9ae18f2eb253575b60fde98c3135c20f085fe6e1484b4aa
+Description:  This package contains a basic IEEE 802.1x/WPA Authenticator and Supplicant with WPA-PSK, 802.11r and 802.11w support.
+
+Package: wpad-mini
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 342856
+Filename: wpad-mini_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 343820
+SHA256sum: c81dffa5326b287c9df75c4218e3e2539012fe8629bb24d778bcfe08ad98ee87
+Description:  This package contains a minimal IEEE 802.1x/WPA Authenticator and Supplicant (WPA-PSK only).
+
+Package: wpad-openssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libopenssl1.1
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 644572
+Filename: wpad-openssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 645192
+SHA256sum: 8bf4899d8612c2e167dad3ee3970a49e0ad574b44e2fe266c89506d25ef6146f
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator and Supplicant
+
+Package: wpad-wolfssl
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630, libwolfssl4.8.1.66253b90
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad-openssl, wpad, wpad-mesh-openssl, wpad-mesh-wolfssl, wpad-basic, wpad-basic-openssl, wpad-basic-wolfssl, wpad-mini, wpad-openssl
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 641542
+Filename: wpad-wolfssl_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 642187
+SHA256sum: 5f46e362187f400f24ca25d4c57ba05aaa57ba17571eb70469bf26468e8d1cc8
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator and Supplicant
+
+Package: wpad
+Version: 2020-06-08-5a8b3662-35
+Depends: libc, librt, libpthread, libnl-tiny1, hostapd-common, libubus20210630
+Conflicts: hostapd, hostapd-basic, hostapd-basic-openssl, hostapd-basic-wolfssl, hostapd-mini, hostapd-openssl, hostapd-wolfssl
+Provides: hostapd, wpa-supplicant
+License: BSD-3-Clause
+Section: net
+CPE-ID: cpe:/a:w1.fi:hostapd
+Architecture: x86_64
+Installed-Size: 632993
+Filename: wpad_2020-06-08-5a8b3662-35_x86_64.ipk
+Size: 633723
+SHA256sum: e19c8e1f170d8d6ff95ffbb9c770da9fd0d4c483259c56cde35f21771683ca8f
+Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+ Authenticator and Supplicant
 
 Package: wwan
 Version: 2019-04-29-5
