@@ -1,3 +1,18 @@
+Package: bash
+Version: 5.1-2
+Depends: libc, librt, libpthread, libncurses6, libreadline8
+License: GPL-3.0-or-later
+Section: utils
+CPE-ID: cpe:/a:gnu:bash
+Architecture: x86_64
+Installed-Size: 467021
+Filename: bash_5.1-2_x86_64.ipk
+Size: 467941
+SHA256sum: b790689381f515b4391c329492b78f3b27cfa622ff145a9b2cb8a462d68e5c31
+Description:  Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file. Bash also
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
 Package: cgi-io
 Version: 2021-09-08-98cef9dd-20
 Depends: libc, librt, libpthread, libubox20210516, libubus20210630
@@ -9,6 +24,48 @@ Filename: cgi-io_2021-09-08-98cef9dd-20_x86_64.ipk
 Size: 10474
 SHA256sum: d9d75e37673f0b6ba5f6fbeb813962cbbb0a3f13d511d89af55e50a31710a74a
 Description:  This package contains an cgi utility that is useful for up/downloading files
+
+Package: curl
+Version: 7.79.1-1
+Depends: libc, librt, libpthread, libcurl
+License: MIT
+Section: net
+CPE-ID: cpe:/a:haxx:libcurl
+Architecture: x86_64
+Installed-Size: 56427
+Filename: curl_7.79.1-1_x86_64.ipk
+Size: 57229
+SHA256sum: 48918e7c1e7c7be02a0d4add9bb07cfacec70259fe2741e91f48257952d7ca8c
+Description:  A client-side URL transfer utility
+
+Package: libcurl4
+Version: 7.79.1-1
+Depends: libc, librt, libpthread, libwolfssl4.8.1.66253b90, libnghttp2-14, ca-bundle
+Provides: libcurl
+License: MIT
+Section: libs
+ABIVersion: 4
+CPE-ID: cpe:/a:haxx:libcurl
+Architecture: x86_64
+Installed-Size: 156455
+Filename: libcurl4_7.79.1-1_x86_64.ipk
+Size: 157335
+SHA256sum: 234a908b8cf1b12b868acbde6b3971a219d79ec50df0491371cdb09a3a220b17
+Description:  A client-side URL transfer library
+
+Package: libnghttp2-14
+Version: 1.43.0-1
+Depends: libc, librt, libpthread
+Provides: libnghttp2
+License: MIT
+Section: libs
+ABIVersion: -14
+Architecture: x86_64
+Installed-Size: 68030
+Filename: libnghttp2-14_1.43.0-1_x86_64.ipk
+Size: 67632
+SHA256sum: 1e9dfda3d892069c348df3fa61ac6e1be0e40123b405331ddce74ad83359e9ef
+Description:  C library implementing the framing layer of the HTTP/2 protocol. It can be used to build a HTTP/2-capable HTTP client or server
 
 Package: nginx-ssl-util
 Version: 1.6-1

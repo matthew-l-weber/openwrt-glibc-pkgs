@@ -780,6 +780,24 @@ Description:  Lua is a powerful light-weight programming language designed for e
  language. Lua is free software.
  This package contains the Lua shared libraries, needed by other programs.
 
+Package: libncurses6
+Version: 6.2-3
+Depends: libc, librt, libpthread, terminfo
+Provides: libncursesw, libncurses, libncursesw6
+Source: package/libs/ncurses
+SourceName: libncurses
+License: MIT
+LicenseFiles: README
+Section: libs
+SourceDateEpoch: 1634850279
+ABIVersion: 6
+Architecture: x86_64
+Installed-Size: 180551
+Filename: libncurses6_6.2-3_x86_64.ipk
+Size: 180192
+SHA256sum: cec55596b1e673289354dac9f33b272c07b8dd40ab5902e9a26425cf8cbbe971
+Description:  Terminal handling library (Unicode)
+
 Package: libnl-tiny1
 Version: 2020-08-05-c291088f-2
 Depends: libc, librt, libpthread
@@ -839,6 +857,30 @@ Filename: libpcre_8.44-3_x86_64.ipk
 Size: 142880
 SHA256sum: 73806440e289f3139bdd5574204a359095386cfc08271c4dd412727ab9866313
 Description:  A Perl Compatible Regular Expression library
+
+Package: libreadline8
+Version: 8.1-1
+Depends: libc, librt, libpthread, libncursesw6
+Provides: libreadline
+Source: package/libs/readline
+SourceName: libreadline
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1613327895
+ABIVersion: 8
+CPE-ID: cpe:/a:gnu:readline
+Architecture: x86_64
+Installed-Size: 135537
+Filename: libreadline8_8.1-1_x86_64.ipk
+Size: 135475
+SHA256sum: 8d7ed560a0cd207e2a8639919c8363e19fb9b2350215f80f114147998863276b
+Description:  The Readline library provides a set of functions for use by applications
+ that allow users to edit command lines as they are typed in. Both Emacs
+ and vi editing modes are available. The Readline library includes
+ additional functions to maintain a list of previously-entered command
+ lines, to recall and perhaps reedit those lines, and perform csh-like
+ history expansion on previous commands.
 
 Package: libsmartcols1
 Version: 2.36.1-2
@@ -1611,6 +1653,22 @@ Filename: rtl8821ae-firmware_20201118-3_x86_64.ipk
 Size: 24708
 SHA256sum: 52bbd44ec26f12c52173ea2681c1bfd0bf33338a7b795db4d5e733744f66afb8
 Description:  RealTek RTL8821AE firmware
+
+Package: terminfo
+Version: 6.2-3
+Depends: libc, librt, libpthread
+Source: package/libs/ncurses
+SourceName: terminfo
+License: MIT
+LicenseFiles: README
+Section: libs
+SourceDateEpoch: 1634850279
+Architecture: x86_64
+Installed-Size: 7230
+Filename: terminfo_6.2-3_x86_64.ipk
+Size: 7960
+SHA256sum: c8093414714ea0626e7146569010fee5201033f797b2fff4a51680294766d1da
+Description:  Terminal Info Database (ncurses)
 
 Package: ubox
 Version: 2020-10-25-9ef88681-2
